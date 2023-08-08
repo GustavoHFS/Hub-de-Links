@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Modo detalhado:
+  background-image: url(./assets/bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: top;
+  background-size: cover;
+  */
+
+  /* Modo de comandos agrupados: 
+  background: color image position/size */
+  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+body * {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+#icon {
+  text-align: center;
+  padding: 24px;
+}
+
+#container {
+  width: 360px;
+  margin: auto;
+  margin-top: 56px;
+}
+
+#icon img {
+  display: block;
+  width: 112px;
+  margin: auto;
+}
+
+#icon p {
+  font-weight: 400;
+  line-height: px;
+  margin-top: 8px;
+}
