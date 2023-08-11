@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DevLinks</title>
+    <title>Gustavo Henrique - Links</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -22,7 +22,7 @@
         <p2>Desenvolvedor Web</p2>
       </div>
 
-      <div id="switch">
+      <div id="switch" onclick="toggleMode()">
         <button></button>
         <span></span>
       </div>
@@ -30,7 +30,7 @@
       <div id="list">
         <ul>
           <li>
-            <a href="#" target="_blank">Veja meu portfólio (Em Breve)</a>
+            <a href="#" target="_blank">Portfólio (Em Breve)</a>
           </li>
 
           <li>
@@ -64,9 +64,11 @@
           <ion-icon name="logo-github"></ion-icon>
         </a>
 
-        <a href="mailto:gustavohenriquefsilva2003@gmail.com" target="_blank">
+        <a href="#" id="email">
           <ion-icon name="mail-outline"></ion-icon>
         </a>
+
+        <script src="./script.js"></script>
       </div>
       <footer>Feito por Gustavo Henrique.</footer>
     </div>
@@ -78,5 +80,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+
+    <script src="./script.js"></script>
   </body>
 </html>
