@@ -4,6 +4,26 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: white;
+  --bg-url: url(./assets/bg-mobile.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.3);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(255, 255, 255, 0.05);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+  --switch-bg: url(./assets/moonstars.svg);
+}
+
+.light {
+  --text-color: black;
+  --bg-url: url(./assets/bg-mobile-light.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.3);
+  --surface-color: rgba(0, 0, 0, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.05);
+  --highlight-color: rgba(0, 0, 0, 0.2);
+  --switch-bg: url(./assets/sun.svg);
+}
+
 body {
   /* Modo detalhado:
   background-image: url(./assets/bg-mobile.jpg);
@@ -15,14 +35,15 @@ body {
 
   /* Modo de comandos agrupados: 
   background: color image position/size */
-  background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+  background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
   font-family: "Inter", sans-serif;
-  color: white;
+  color: var(--text-color);
 }
 
+/* Avatar */
 #icon {
   text-align: center;
   padding: 24px;
@@ -53,10 +74,46 @@ body * {
   line-height: px;
   margin-top: 4px;
   display: block;
-  font-size: 14px;
+  font-size: 12px;
 }
 
-/* links */
+/* Botão Switch */
+#switch {
+  position: relative;
+  width: 64px;
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg) no-repeat center;
+  border-radius: 50%;
+  border: 0;
+
+  right: 0;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+
+.light #switch button {
+  left: 0;
+  right: initial;
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
+  backdrop-filter: blur(4px);
+}
+
+/* Links */
 ul {
   list-style: none;
 
@@ -75,8 +132,8 @@ ul li a {
   padding: 16px 24px;
 
   border-radius: 8px;
-  border: 1px solid var(--stroke-color-dark-mode, rgba(255, 255, 255, 0.3));
-  background: var(--surface-color-dark-mode, rgba(255, 255, 255, 0.1));
+  border: 1px solid var(--stroke-color);
+  background: var(--surface-color);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 
@@ -87,11 +144,11 @@ ul li a {
 }
 
 ul li a:hover {
-  background: var(--surface-color-dark-mode, rgba(255, 255, 255, 0.05));
-  border: 1.5px solid var(--stroke-color-dark-mode, rgb(255, 255, 255));
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
 }
 
-/* links */
+/* Icones-Links */
 #social-links {
   display: flex;
   justify-content: center;
@@ -112,7 +169,7 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--highlight-color);
 }
 
 footer {
@@ -120,4 +177,8 @@ footer {
   text-align: center;
   font-size: 14px;
   font-style: italic;
+}
+
+#list {
+  padding-top: 24px;
 }
