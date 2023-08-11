@@ -1,7 +1,7 @@
 <h1 align="center"> Hub de Links </h1>
 
-<p>
-Projeto realizado junto ao curso da Rocketseat: Discover. <br/>
+<p> Projeto realizado junto ao curso da Rocketseat: Discover.<br/>
+Link para o visualização do projeto: http://bit.ly/45pDCFc
 
 ## 🚀 Tecnologias
 
